@@ -1,41 +1,26 @@
 body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-image: url('https://images.unsplash.com/photo-1504198458649-3128b932f49b?auto=format&fit=crop&w=1950&q=80');
-  background-size: cover;
-  background-position: center;
-  backdrop-filter: blur(2px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  min-height: 100vh;
-  padding: 2rem 1rem;
-  overflow-y: auto; /* Enable vertical scrolling */
+  display: block; /* Change from flex to block layout */
+  min-height: auto;
+  padding: 1rem;
+  overflow-y: auto;
 }
 
 .couple-photo {
   width: 120px;
   height: 120px;
-  border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #b30059;
-  margin-bottom: 1rem;
+  border-radius: 50%;
   display: block;
+  margin: 1rem auto;
+  border: 3px solid #b30059;
 }
 
 .container {
-  background: rgba(255, 255, 255, 0.95);
-  padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-  width: 90%;
-  max-width: 450px;
-  text-align: center;
-  overflow: visible; /* Allow contents to overflow if necessary */
+  margin-top: 2rem; /* Push container down */
+  margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center items horizontally */
+  align-items: center;
 }
 
 h2 {
