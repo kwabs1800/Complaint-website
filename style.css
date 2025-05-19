@@ -11,13 +11,13 @@ body {
 }
 
 .couple-photo {
-  width: 100%;
+  width: auto;
   max-width: 200px;
   height: auto;
-  border-radius: 15px;
+  border-radius: 15px; /* or remove for square/rectangular */
   border: 3px solid #b30059;
   margin-bottom: 1rem;
-  background-color: white;
+  display: block;
 }
 
 .container {
