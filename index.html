@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>M&M Complaint Box</title>
-  <link rel="stylesheet" href="style.css" />
   <style>
     body {
       margin: 0;
@@ -12,7 +11,7 @@
       background-image: url('https://images.unsplash.com/photo-1504198458649-3128b932f49b?auto=format&fit=crop&w=1950&q=80');
       background-size: cover;
       background-position: center;
-      backdrop-filter: blur(2px);
+      backdrop-filter: blur(3px);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -26,19 +25,10 @@
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
       width: 90%;
       max-width: 450px;
-      text-align: center;
-    }
-
-    img.couple-photo {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 1rem;
-      border: 3px solid #b30059;
     }
 
     h2 {
+      text-align: center;
       color: #b30059;
       font-family: 'Georgia', serif;
       margin-bottom: 1rem;
@@ -49,7 +39,6 @@
       margin-top: 1rem;
       font-weight: bold;
       color: #333;
-      text-align: left;
     }
 
     textarea, input {
@@ -91,35 +80,30 @@
       font-size: 0.8rem;
       color: #999;
     }
-
-    iframe.audio {
-      display: none;
-    }
   </style>
 </head>
 <body>
   <div class="container">
-    <h2>M&M Grievance Form</h2>
+    <h2>M&M's Love & Complaints</h2>
     <form action="https://formsubmit.co/mickcloy@gmail.com" method="POST">
       <input type="hidden" name="_captcha" value="false">
 
       <label for="frequency">How often is this an issue?</label>
-      <input type="text" id="frequency" name="frequency" placeholder="E.g., Every day " required />
+      <input type="text" id="frequency" name="frequency" placeholder="E.g., Every day" required />
 
       <label for="complaint">What's the complaint?</label>
-      <textarea id="complaint" name="complaint" rows="4" placeholder="Don't be shy..." required></textarea>
+      <textarea id="complaint" name="complaint" rows="4" placeholder="Let it all out..." required></textarea>
 
       <label for="suggestion">How can I make it better?</label>
       <textarea id="suggestion" name="suggestion" rows="4" placeholder="Give me a shot to fix it 🩷" required></textarea>
 
       <button type="submit">Send to M</button>
     </form>
-    <div class="footer">  
+    <div class="footer"> 
       <span>“Somebody's problem, somebody's goodbye...” – Morgan Wallen</span>
     </div>
   </div>
-
-<div class="video-container">
+  <div class="video-container">
   <iframe 
     src="https://www.youtube.com/embed/HwThuMZ80RA?si=1rqIoGF9hCGTBsvm" 
     title="Morgan Wallen - Somebody’s Problem"
