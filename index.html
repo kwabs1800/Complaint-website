@@ -3,79 +3,127 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Complaint Box</title>
+  <title>M&M Complaint Box</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f8f9fa;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url('https://images.unsplash.com/photo-1504198458649-3128b932f49b?auto=format&fit=crop&w=1950&q=80');
+      background-size: cover;
+      background-position: center;
+      backdrop-filter: blur(2px);
       display: flex;
       align-items: center;
       justify-content: center;
       height: 100vh;
     }
+
     .container {
-      background: white;
+      background: rgba(255, 255, 255, 0.95);
       padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
-      width: 100%;
-      max-width: 400px;
-    }
-    h2 {
+      border-radius: 15px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+      width: 90%;
+      max-width: 450px;
       text-align: center;
-      color: #333;
     }
+
+    img.couple-photo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      border: 3px solid #b30059;
+    }
+
+    h2 {
+      color: #b30059;
+      font-family: 'Georgia', serif;
+      margin-bottom: 1rem;
+    }
+
     label {
       display: block;
       margin-top: 1rem;
       font-weight: bold;
+      color: #333;
+      text-align: left;
     }
+
     textarea, input {
       width: 100%;
       padding: 0.75rem;
       margin-top: 0.5rem;
       border: 1px solid #ccc;
-      border-radius: 5px;
+      border-radius: 8px;
+      font-size: 1rem;
     }
+
     button {
       margin-top: 1.5rem;
       width: 100%;
       padding: 0.75rem;
-      background: #e63946;
+      background: #b30059;
       color: white;
       border: none;
-      border-radius: 5px;
+      border-radius: 8px;
       font-size: 1rem;
+      transition: background 0.3s;
     }
+
     button:hover {
-      background: #d62828;
+      background: #99004d;
     }
+
     .footer {
       text-align: center;
-      margin-top: 1rem;
+      margin-top: 1.5rem;
       font-size: 0.9rem;
-      color: #666;
+      color: #555;
+      font-style: italic;
+    }
+
+    .footer span {
+      display: block;
+      margin-top: 0.5rem;
+      font-size: 0.8rem;
+      color: #999;
+    }
+
+    iframe.audio {
+      display: none;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h2>Grievance Redress Form</h2>
+    <img src="photo.jpeg" alt="M&M Photo" class="couple-photo"/>
+    <h2>M&M's Love & Complaints</h2>
     <form action="https://formsubmit.co/mickcloy@gmail.com" method="POST">
-      
-      <input type="hidden" frequency of issue="_captcha" value="false">
-      <label for="frequency">Frequency of Issue</label>
-      <input type="text" id="frequency" name="frequency" required />
-      
-      <label for="complaint">Complaint</label>
-      <textarea id="complaint" name="complaint" rows="5" required></textarea>
+      <input type="hidden" name="_captcha" value="false">
 
-      <label for="suggestion">Suggestion</label>
-      <textarea id="suggestion" name="suggestion" rows="5" required></textarea>
-      
-      <button type="submit">Submit Complaint</button>
+      <label for="frequency">How often is this an issue?</label>
+      <input type="text" id="frequency" name="frequency" placeholder="E.g., Every day 😅" required />
+
+      <label for="complaint">What's the complaint?</label>
+      <textarea id="complaint" name="complaint" rows="4" placeholder="Let it all out..." required></textarea>
+
+      <label for="suggestion">How can I make it better?</label>
+      <textarea id="suggestion" name="suggestion" rows="4" placeholder="Give me a shot to fix it ❤️" required></textarea>
+
+      <button type="submit">Send to M</button>
     </form>
-    <div class="footer">Powered by love and accountability ❤️</div>
+    <div class="footer">
+      Powered by M&M 🌸  
+      <span>“Somebody's problem, somebody's goodbye...” – Morgan Wallen</span>
+    </div>
   </div>
+
+  <!-- Background Music (Autoplay and Loop) -->
+  <iframe class="audio" width="0" height="0" 
+    src="https://www.youtube.com/embed/pToQ0nlDZgY?autoplay=1&loop=1&playlist=pToQ0nlDZgY&mute=0" 
+    title="Morgan Wallen - Somebody’s Problem"
+    frameborder="0" allow="autoplay"></iframe>
 </body>
 </html>
