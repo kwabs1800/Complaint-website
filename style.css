@@ -10,6 +10,16 @@ body {
   padding: 1rem;
 }
 
+.couple-photo {
+  width: 120px;
+  height: 120px;
+  object-fit: contain; /* ensures the full photo shows */
+  border-radius: 50%;
+  border: 3px solid #b30059;
+  margin-bottom: 1rem;
+  background-color: white; /* optional, for contrast */
+}
+
 .container {
   background: white;
   padding: 2rem;
